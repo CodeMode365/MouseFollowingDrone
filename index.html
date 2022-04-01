@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+   
+</head>
+<body>
+    <div class="drone">
+      
+        <img src="./drone/propeller.png"  class="fans">
+        <img src="./drone/propeller.png"  class="fans">
+        <img src="./drone/propeller.png"  class="fans">
+        <img src="./drone/propeller.png"  class="fans">
+        <img src="./drone/drone.png" class="body">
+        <div class="lights">
+            <div id="light1" class="lig"></div>
+            <div id="light2" class="lig"></div>
+            <div id="light3" class="lig"></div>
+            <div id="light4" class="lig"></div>
+        </div>
+        
+    </div>
+    
+    <script>
+        let drone=document.querySelector('.drone');
+        let lights=document.querySelectorAll('.lig');
+        console.log(lights)
+       onmousemove =function(e){
+            let X= e.pageX;
+            let Y=e.pageY;
+            drone.style.left=X+"px";
+            drone.style.top=Y+"px";
+           
+            
+            // console.log(X,Y);
+
+
+        }
+    </script>
+
+
+    
+    
+</body>
+</html>

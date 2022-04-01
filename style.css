@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: aquamarine;
+    height:100vh;
+    width: 100vw;
+    overflow: hidden;
+    /* box-sizing: border-box; */
+}
+.drone{
+    position: absolute;
+    top: 100px;
+    left:100px;
+    transform: translate(-20%, -20%) scale(20%);
+    transition: 2s ease;
+}
+.drone .body{
+    position: absolute;
+    top:20%;
+    left:30%;
+    z-index: 1;
+
+}
+.drone .fans{
+    position: absolute;
+    background-color: ;
+    /* box-shadow: 140px 180px 530px 300px red; */
+
+    animation: rotation 0.6s linear infinite;
+}
+.drone .fans:nth-child(1){
+    left: 260px;
+    top: 261px;
+}
+.drone .fans:nth-child(2) {
+    left: -64px;
+    top: -71px;
+    
+}
+.drone .fans:nth-child(3) {
+    left: -64px;
+    top: 261px;
+}
+.drone .fans:nth-child(4) {
+    left: 260px;
+    top: -65px;
+   
+}
+.drone .lights #light1, #light2, #light3, #light4{
+    position: absolute;
+    background-color: rgb(204, 63, 63);
+    width: 35px;
+    height: 41px;
+    /* left: 84px;
+    top: 78px; */
+    border-radius: 50px;
+    animation: lighting 2s infinite linear;
+}
+/* .drone .lights:nth-child(1){
+    position: absolute;
+    left: 84px;
+    top: 78px;
+} */
+#light1{
+    left: 332px;
+    top: 327px;
+
+}
+#light2{
+    position: absolute;
+    left: 2px;
+    top: 1px;
+
+}#light3{
+    position: absolute;
+    left: 332px;
+    top: 1px;
+
+}#light4{
+    position: absolute;
+    left: 2px;
+    top: 327px;
+
+}
+
+@keyframes rotation {
+    0%{
+        transform:rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
+@keyframes lighting{
+    0%{
+    box-shadow: 0px 0px 20px 30px rgba(230, 21, 21, 0.329);
+
+    }
+    50%{
+    box-shadow: 0px 0px 20px 30px rgba(230, 21, 21, 0.924);
+
+
+    }
+    100%{
+    box-shadow: 0px 0px 20px 30px rgba(230, 21, 21, 0.329);
+
+    }
+}
